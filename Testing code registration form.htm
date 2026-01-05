@@ -1,0 +1,329 @@
+<html>
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1251">
+<meta name=Generator content="Microsoft Word 15 (filtered)">
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;}
+@font-face
+	{font-family:Aptos;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:8.0pt;
+	margin-left:0cm;
+	line-height:115%;
+	font-size:12.0pt;
+	font-family:"Aptos",sans-serif;}
+.MsoPapDefault
+	{margin-bottom:8.0pt;
+	line-height:115%;}
+@page WordSection1
+	{size:595.3pt 841.9pt;
+	margin:72.0pt 72.0pt 72.0pt 72.0pt;}
+div.WordSection1
+	{page:WordSection1;}
+-->
+</style>
+
+</head>
+
+<body lang=EN-GB style='word-wrap:break-word'>
+
+<div class=WordSection1>
+
+<p class=MsoNormal><span lang=FR>&lt;!DOCTYPE html&gt;</span></p>
+
+<p class=MsoNormal><span lang=FR>&lt;html lang=&quot;en&quot;&gt;</span></p>
+
+<p class=MsoNormal>&lt;head&gt;</p>
+
+<p class=MsoNormal>&lt;meta charset=&quot;UTF-8&quot;&gt;</p>
+
+<p class=MsoNormal>&lt;title&gt;Accessible Form with Mandatory
+Country&lt;/title&gt;</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>&lt;style&gt;</p>
+
+<p class=MsoNormal>  body {</p>
+
+<p class=MsoNormal>    font-family: Arial, sans-serif;</p>
+
+<p class=MsoNormal>    line-height: 1.6;</p>
+
+<p class=MsoNormal>  }</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>  label {</p>
+
+<p class=MsoNormal>    display: block;</p>
+
+<p class=MsoNormal>    margin-top: 16px;</p>
+
+<p class=MsoNormal>    font-weight: bold;</p>
+
+<p class=MsoNormal>  }</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>  input, select, button {</p>
+
+<p class=MsoNormal>    font-size: 16px;</p>
+
+<p class=MsoNormal>    padding: 6px;</p>
+
+<p class=MsoNormal>    width: 320px;</p>
+
+<p class=MsoNormal>  }</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>  :focus {</p>
+
+<p class=MsoNormal>    outline: 3px solid #005fcc;</p>
+
+<p class=MsoNormal>    outline-offset: 2px;</p>
+
+<p class=MsoNormal>  }</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>  .error {</p>
+
+<p class=MsoNormal>    color: #b00020;</p>
+
+<p class=MsoNormal>    font-weight: bold;</p>
+
+<p class=MsoNormal>    margin-top: 6px;</p>
+
+<p class=MsoNormal>  }</p>
+
+<p class=MsoNormal>&lt;/style&gt;</p>
+
+<p class=MsoNormal>&lt;/head&gt;</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>&lt;body&gt;</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>&lt;h1&gt;User Information&lt;/h1&gt;</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>&lt;form id=&quot;accessibleForm&quot; novalidate&gt;</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>  &lt;!-- First Name --&gt;</p>
+
+<p class=MsoNormal>  &lt;label for=&quot;firstName&quot;&gt;First
+Name&lt;/label&gt;</p>
+
+<p class=MsoNormal>  &lt;input</p>
+
+<p class=MsoNormal>    id=&quot;firstName&quot;</p>
+
+<p class=MsoNormal>    type=&quot;text&quot;</p>
+
+<p class=MsoNormal>    value=&quot;John&quot;</p>
+
+<p class=MsoNormal>    readonly</p>
+
+<p class=MsoNormal>  &gt;</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>  &lt;!-- Last Name --&gt;</p>
+
+<p class=MsoNormal>  &lt;label for=&quot;lastName&quot;&gt;Last
+Name&lt;/label&gt;</p>
+
+<p class=MsoNormal>  &lt;input</p>
+
+<p class=MsoNormal>    id=&quot;lastName&quot;</p>
+
+<p class=MsoNormal>    type=&quot;text&quot;</p>
+
+<p class=MsoNormal>    value=&quot;Doe&quot;</p>
+
+<p class=MsoNormal>    readonly</p>
+
+<p class=MsoNormal>  &gt;</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>  &lt;!-- Email --&gt;</p>
+
+<p class=MsoNormal>  &lt;label for=&quot;email&quot;&gt;Email&lt;/label&gt;</p>
+
+<p class=MsoNormal>  &lt;input</p>
+
+<p class=MsoNormal>    id=&quot;email&quot;</p>
+
+<p class=MsoNormal>    type=&quot;email&quot;</p>
+
+<p class=MsoNormal>    value=&quot;john.doe@example.com&quot;</p>
+
+<p class=MsoNormal>    readonly</p>
+
+<p class=MsoNormal>  &gt;</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>  &lt;!-- Mandatory Country Combo Box --&gt;</p>
+
+<p class=MsoNormal>  &lt;label for=&quot;country&quot;&gt;</p>
+
+<p class=MsoNormal>    Country &lt;span
+aria-hidden=&quot;true&quot;&gt;*&lt;/span&gt;</p>
+
+<p class=MsoNormal>  &lt;/label&gt;</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>  &lt;select</p>
+
+<p class=MsoNormal>    id=&quot;country&quot;</p>
+
+<p class=MsoNormal>    aria-required=&quot;true&quot;</p>
+
+<p class=MsoNormal>    aria-describedby=&quot;countryError&quot;</p>
+
+<p class=MsoNormal>  &gt;</p>
+
+<p class=MsoNormal>    &lt;option value=&quot;&quot;&gt;-- Select Country
+--&lt;/option&gt;</p>
+
+<p class=MsoNormal>    &lt;option
+value=&quot;CH&quot;&gt;Switzerland&lt;/option&gt;</p>
+
+<p class=MsoNormal>    &lt;option value=&quot;US&quot;&gt;United
+States&lt;/option&gt;</p>
+
+<p class=MsoNormal>    &lt;option value=&quot;IN&quot;&gt;India&lt;/option&gt;</p>
+
+<p class=MsoNormal>  &lt;/select&gt;</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>  &lt;!-- Error Message --&gt;</p>
+
+<p class=MsoNormal>  &lt;div</p>
+
+<p class=MsoNormal>    id=&quot;countryError&quot;</p>
+
+<p class=MsoNormal>    class=&quot;error&quot;</p>
+
+<p class=MsoNormal>    role=&quot;alert&quot;</p>
+
+<p class=MsoNormal>    aria-live=&quot;assertive&quot;</p>
+
+<p class=MsoNormal>  &gt;&lt;/div&gt;</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>  &lt;button
+type=&quot;submit&quot;&gt;Submit&lt;/button&gt;</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>&lt;/form&gt;</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>&lt;script&gt;</p>
+
+<p class=MsoNormal>const form =
+document.getElementById(&quot;accessibleForm&quot;);</p>
+
+<p class=MsoNormal>const country =
+document.getElementById(&quot;country&quot;);</p>
+
+<p class=MsoNormal>const error =
+document.getElementById(&quot;countryError&quot;);</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>/* Place cursor at the first alphabet on focus */</p>
+
+<p class=MsoNormal>[&quot;firstName&quot;, &quot;lastName&quot;,
+&quot;email&quot;].forEach(id =&gt; {</p>
+
+<p class=MsoNormal>  const field = document.getElementById(id);</p>
+
+<p class=MsoNormal>  field.addEventListener(&quot;focus&quot;, () =&gt; {</p>
+
+<p class=MsoNormal>    field.setSelectionRange(0, 0);</p>
+
+<p class=MsoNormal>  });</p>
+
+<p class=MsoNormal>});</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>/* Prevent Tab navigation if mandatory Country is not
+selected */</p>
+
+<p class=MsoNormal>country.addEventListener(&quot;keydown&quot;, event =&gt; {</p>
+
+<p class=MsoNormal>  if (event.key === &quot;Tab&quot; &amp;&amp; country.value
+=== &quot;&quot;) {</p>
+
+<p class=MsoNormal>    event.preventDefault();</p>
+
+<p class=MsoNormal>    showError();</p>
+
+<p class=MsoNormal>  }</p>
+
+<p class=MsoNormal>});</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>/* Validate on form submission */</p>
+
+<p class=MsoNormal>form.addEventListener(&quot;submit&quot;, event =&gt; {</p>
+
+<p class=MsoNormal>  if (country.value === &quot;&quot;) {</p>
+
+<p class=MsoNormal>    event.preventDefault();</p>
+
+<p class=MsoNormal>    showError();</p>
+
+<p class=MsoNormal>  }</p>
+
+<p class=MsoNormal>});</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>function showError() {</p>
+
+<p class=MsoNormal>  error.textContent = &quot;Country is mandatory. Please
+select a country.&quot;;</p>
+
+<p class=MsoNormal>  country.focus();</p>
+
+<p class=MsoNormal>}</p>
+
+<p class=MsoNormal>&lt;/script&gt;</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>&lt;/body&gt;</p>
+
+<p class=MsoNormal>&lt;/html&gt;</p>
+
+</div>
+
+</body>
+
+</html>
