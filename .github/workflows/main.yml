@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Accessible Form with Mandatory Country</title>
+
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+  }
+
+  label {
+    display: block;
+    margin-top: 16px;
+    font-weight: bold;
+  }
+
+  input, select, button {
+    font-size: 16px;
+    padding: 6px;
+    width: 320px;
+  }
+
+  :focus {
+    outline: 3px solid #005fcc;
+    outline-offset: 2px;
+  }
+
+  .error {
+    color: #b00020;
+    font-weight: bold;
+    margin-top: 6px;
+  }
+</style>
+</head>
+
+<body>
+
+<h1>User Information</h1>
+
+<form id="accessibleForm" novalidate>
+
+  <!-- First Name -->
+  <label for="firstName">First Name</label>
+  <input
+    id="firstName"
+    type="text"
+    value="John"
+    readonly
+  >
+
+  <!-- Last Name -->
+  <label for="lastName">Last Name</label>
+  <input
+    id="lastName"
+    type="text"
+    value="Doe"
+    readonly
+  >
+
+  <!-- Email -->
+  <label for="email">Email</label>
+  <input
+    id="email"
+    type="email"
+    value="john.doe@example.com"
+    readonly
+  >
+
+  <!-- Mandatory Country Combo Box -->
+  <label for="country">
+    Country <span aria-hidden="true">*</span>
+  </label>
+
+  <select
+    id="country"
+    aria-required="true"
+    aria-describedby="countryError"
+  >
+    <option value="">-- Select Country --</option>
+    <option value="CH">Switzerland</option>
+    <option value="US">United States</option>
+    <option value="IN">India</option>
+  </select>
+
+  <!-- Error Message -->
+  <div
+    id="countryError"
+    class="error"
+    role="alert"
+    aria-live="assertive"
+  ></div>
+
+  <button type="submit">Submit</button>
+
+</form>
+
+<script>
+const form = document.getElementById("accessibleForm");
+const country = document.getElementById("country");
+const error = document.getElementById("countryError");
+
+/* Place cursor at the first alphabet on focus */
+["firstName", "lastName", "email"].forEach(id => {
+  const field = document.getElementById(id);
+  field.addEventListener("focus", () => {
+    field.setSelectionRange(0, 0);
+  });
+});
+
+/* Prevent Tab navigation if mandatory Country is not selected */
+country.addEventListener("keydown", event => {
+  if (event.key === "Tab" && country.value === "") {
+    event.preventDefault();
+    showError();
+  }
+});
+
+/* Validate on form submission */
+form.addEventListener("submit", event => {
+  if (country.value === "") {
+    event.preventDefault();
+    showError();
+  }
+});
+
+function showError() {
+  error.textContent = "Country is mandatory. Please select a country.";
+  country.focus();
+}
+</script>
+
+</body>
+</html>
